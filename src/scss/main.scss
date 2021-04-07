@@ -337,10 +337,12 @@ nav {
     width: 80%;
     margin: 0 auto;
     display: flex;
+    padding-top: 40px;
   }
 }
 
 .step {
+  position: relative;
   flex: 1;
   text-align: center;
   @include getStepNums(3);
@@ -362,5 +364,20 @@ nav {
       background-color: $freedom-blue;
       color: $body-color;
     }
+    .label-container {
+      color: $body-color;
+    }
+  }
+  &.checked .circle-container::after {
+    content: "\2714";
+  }
+  .connect-line {
+    display: block;
+    height: 1px;
+    background-color: $light-gray;
+    position: absolute;
+    top: 12px;
+    left: calc(-50% + 20px);
+    right: calc(50% + 20px);
   }
 }
