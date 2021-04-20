@@ -329,13 +329,17 @@ nav {
 
 .right-content {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 .stepper-panel {
   height: 120px;
   .stepper-container {
-    width: 80%;
-    margin: 0 auto;
     display: flex;
     padding-top: 40px;
   }
@@ -379,5 +383,20 @@ nav {
     top: 12px;
     left: calc(-50% + 20px);
     right: calc(50% + 20px);
+  }
+}
+
+.form-panel {
+  @extend %standard-boxshadow;
+  background-color: $white;
+  padding: 32px 0;
+  flex: 1;
+  overflow-y: scroll;
+  .terms-panel {
+    max-height: 300px;
+    padding: 16px;
+    border: 1px solid $light-gray;
+    border-radius: 5px;
+    overflow-y: scroll;
   }
 }
